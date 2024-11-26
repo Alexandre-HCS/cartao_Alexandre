@@ -49,6 +49,14 @@ table {
 
 /* FIM DO RESET */
 
+@import url('https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+  font-family: "Delius Swash Caps", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 body{
     background-image: url(fundo.jpg);
     display: flex;
@@ -62,10 +70,17 @@ body div.cartao{
     padding: 20px;
     margin: 10px;
     border: 20px solid rgb(223, 223, 223);
+    border-radius: 2%;
 }
+
+body div.cartao:hover{
+  animation: cores 1s linear infinite; 
+}
+
 
 body div.cartao img{
     width: 20vw;
+    border-radius: 5%;
 }
 
 body div.cartao div.text{
@@ -88,15 +103,18 @@ img {
   }
   
   img:hover {
-    animation: shake 0.5s ease infinite; 
+    animation: shake 0.5s linear infinite; 
   }
   
   @keyframes shake {
-    0% { transform: translate(-2px, 2px) rotate(2deg); }
+    12.5% { transform: translate(0px, 0px) rotate(0deg); }
     25% { transform: translate(-1px, 1px) rotate(1deg); }
-    50% { transform: translate(0px, 0px) rotate(0deg); }
-    100% { transform: translate(2px, -2px) rotate(-2deg); }
-    75% { transform: translate(1px, -1px) rotate(-1deg); }
+    37.5% { transform: translate(-2px, 2px) rotate(2deg); }
+    50% { transform: translate(-1px, 1px) rotate(1deg); }
+    62.5% { transform: translate(0px, -0px) rotate(0deg); }
+    75% { transform: translate(1px, -1px) rotate(1deg); }
+    87.5% { transform: translate(2px, -2px) rotate(2deg); }
+    100% { transform: translate(1px, -1px) rotate(1deg); }
   }
 
 .text{
@@ -104,25 +122,26 @@ img {
 }
 
 .text:hover {
-    animation: balanco 0.5s ease infinite; 
-    animation: rgb 0.5 ease-in-out infinite;
+    animation: balanco 0.5s linear infinite; 
   }
 
   @keyframes balanco {
-    12.5% { transform: translate(0px, 0px); }
-    25% { transform: translate(-1px, 0px); }
-    37.5% { transform: translate(-2px, 0px); }
-    50% { transform: translate(-1px, 0px); }
-    62.5% { transform: translate(0px, 0px); }
-    75% { transform: translate(1px, 0px); }
-    87.5% { transform: translate(2px, 0px); }
-    100% { transform: translate(1px, 0px) ; }
+    12.5% { transform: translate(0px, 0px) ; color: red;}
+    25% { transform: translate(-1px, 0px); color: #aa5500;}
+    37.5% { transform: translate(-2px, 0px); color: #55aa00;}
+    50% { transform: translate(-1px, 0px); color: #00ff00;}
+    62.5% { transform: translate(0px, 0px); color: #00aa55;}
+    75% { transform: translate(1px, 0px); color: #0055aa;}
+    87.5% { transform: translate(2px, 0px); color: blue;}
+    100% { transform: translate(1px, 0px) ; color: #800080;}
+    
   }
 
-  @keyframes rgb {
-    0% { color: #fff;: translate(-2px, 2px) rotate(2deg); }
-    25% { transform: translate(-1px, 1px) rotate(1deg); }
-    50% { transform: translate(0px, 0px) rotate(0deg); }
-    100% { transform: translate(2px, -2px) rotate(-2deg); }
-    75% { transform: translate(1px, -1px) rotate(-1deg); }
+  @keyframes cores {
+    16.66% {border-color: #ffffff;}
+    33.33% {border-color: #80ff80;}
+    50% {border-color: #00ff00;}
+    66.66% {border-color: #808000;}
+    83.33% {border-color: red;}
+    100% {border-color: #ff8080;}
   }
